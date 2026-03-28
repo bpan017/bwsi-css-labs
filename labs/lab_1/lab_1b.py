@@ -70,6 +70,18 @@ def request_sanitized_operation(prompt: str) -> str:
         else:
             print("Invalid operation. Please choose from 'add', 'subtract', 'multiply', or 'divide'.")
 
+def division_by_zero_check(num2: float) -> None:
+    """
+    Function that checks if the second number is zero when performing division.
+
+    Args:
+        num2 (float): The second number to check for division by zero.
+    Raises:
+        ValueError: If num2 is zero, raises a ValueError indicating division by zero is not allowed.
+    """
+    if num2 == 0:
+        raise ValueError("Cannot divide by zero.")
+
 def main():
     
     print(f"===== Simple Calculator =====")
